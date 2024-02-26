@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
@@ -90,10 +94,10 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static_backend/'
 STATIC_ROOT= BASE_DIR / 'static_backend'
-MEDIA_URL = '/var/www/kittygram/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/var/www/infra_sprint1/media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
